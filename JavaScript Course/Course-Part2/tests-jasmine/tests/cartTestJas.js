@@ -2,8 +2,8 @@ import {cart, addToCart, loadFromStorage} from '../../data/cart.js'
 
 describe('test-suite: addToCart', () => {
   it('adds an existing product to the cart', () => {
+    spyOn(localStorage, 'setItem');
     spyOn(localStorage,'getItem').and.callFake(() => {
-      spyOn(localStorage, 'setItem');
 
       return JSON.stringify([{
         productId:'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
