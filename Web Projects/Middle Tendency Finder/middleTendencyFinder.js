@@ -71,8 +71,14 @@ function calculateMode(numbers) {
       mode = number;
     }
   });
+  
+  if (maxCount === 1) {
+    return mode = 'No Mode';
+  } else {
+    return mode;
+  }
 
-  return mode;
+
 }
 
 // MODE CALC END
